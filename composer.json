@@ -1,0 +1,26 @@
+{
+    "name": "xtend-laravel/feature-lunar-notify-timeline",
+    "description": "Cart management for Lunar",
+    "type": "xtend-feature",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "XtendLunar\\Features\\NotifyTimeline\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adam Lee",
+            "email": "adam@codelabx.ltd"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "XtendLunar\\Features\\NotifyTimeline\\NotifyTimelineProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
