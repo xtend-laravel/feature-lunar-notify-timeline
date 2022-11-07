@@ -15,6 +15,8 @@ class NotifyTimelineProvider extends ServiceProvider
 {
     public function register(): void
     {
+        $this->loadViewsFrom(__DIR__.'/Resources/views', 'notifications');
+
         Livewire::component('hub.components.orders.activity.comment-notification', CommentNotification::class);
         Livewire::component('hub.components.orders.email-notification', EmailNotification::class);
         Livewire::component('system.notifications', Notifications::class);
