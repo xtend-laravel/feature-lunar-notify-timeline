@@ -11,7 +11,7 @@ use XtendLunar\Features\NotifyTimeline\Base\Notification;
 
 trait HasModelNotification
 {
-    public function customerNotification(Customer $customer): DatabaseNotification
+    protected static function customerNotification(Customer $customer): DatabaseNotification
     {
         return Notification::make()
             ->success()
@@ -27,7 +27,7 @@ trait HasModelNotification
             ->toDatabase();
     }
 
-    public function orderNotification(Order $order): DatabaseNotification
+    protected static function orderNotification(Order $order): DatabaseNotification
     {
         return Notification::make()
             ->success()
@@ -43,7 +43,7 @@ trait HasModelNotification
             ->toDatabase();
     }
 
-    public function cartNotification()
+    protected static function cartNotification()
     {
         // @todo Handle notification for abandon cart
     }
