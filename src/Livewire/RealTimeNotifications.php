@@ -35,7 +35,7 @@ class RealTimeNotifications extends Component
 
         if ($notification) {
             Notification::fromArray($notification->data)
-                ->seconds(60)
+                ->seconds(30)
                 ->send();
 
             Session::put('filament.real-time-notifications', array_merge($keys, [$notification->data['id'] => $notification->id]));
