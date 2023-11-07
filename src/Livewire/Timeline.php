@@ -38,6 +38,10 @@ class Timeline extends Component
             request()->route()->parameterNames()[0]
         );
 
+        if (is_string($model)) {
+            return;
+        }
+
         if (! $model instanceof Model) {
             throw new \Exception(__('Invalid model provided (:model).', ['model' => $model]));
         }
